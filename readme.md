@@ -23,7 +23,7 @@ SEE their electricity consumption
 The product should feel like a real campus sustainability platform, not a static college project.
 
 ==================================================
-JUDGING / RUBRIC PRIORITY
+
 ==================================================
 
 Optimize the entire application around these judging factors:
