@@ -1,58 +1,85 @@
 HOSTEL ENERGY LEADERBOARD
 Gamified Sustainability Dashboard
 
-We’re building a frontend-only hackathon project called “Hostel Energy Leaderboard.”
+We are building a 30-minute frontend hackathon prototype called “Hostel Energy Leaderboard.”
 
-The basic idea is simple: hostel students usually don’t know how much electricity their room is using, and there isn’t much motivation to save it. We want to turn this into a small competition where students can see their usage, compare themselves with other rooms, maintain eco-streaks, earn badges, and unlock campus rewards.
+The goal is not just to make a beautiful dashboard. The product should clearly solve a real hostel problem and demonstrate enough functionality that judges can immediately see its usefulness, innovation, technical execution and potential real-world impact.
 
-This is a 30-minute hackathon, so keep the project focused on the frontend. No backend, authentication, database, APIs, or real IoT integration. Use realistic mock data.
+CORE IDEA
 
-TECH STACK
+Hostel students often waste electricity because they cannot easily see how much energy they are consuming and there is little immediate incentive to reduce it.
 
-- React + Vite
-- Tailwind CSS
-- Recharts for graphs
-- Lucide React for icons
-- Hardcoded/mock data
-- Responsive design
-- Deployable on Vercel
+Our solution turns electricity conservation into a friendly competition.
 
-MAIN EXPERIENCE
+Students can:
 
-The first screen should immediately show the hostel leaderboard.
+SEE their electricity consumption
+→ COMPARE their room with others
+→ CLIMB the leaderboard
+→ BUILD eco-streaks
+→ EARN achievements
+→ UNLOCK campus rewards
 
-Students should be able to understand within a few seconds:
+The product should feel like a real campus sustainability platform, not a static college project.
 
-- Who is currently #1
-- How much electricity they are using
-- Where their own room stands
-- Who improved this week
-- How much energy the hostel community has saved
+==================================================
+JUDGING / RUBRIC PRIORITY
+==================================================
 
-LEADERBOARD
+Optimize the entire application around these judging factors:
 
-Create around 50 rooms, such as:
+1. PROBLEM UNDERSTANDING
+2. SOLUTION RELEVANCE
+3. INNOVATION
+4. FUNCTIONALITY
+5. UI/UX QUALITY
+6. TECHNICAL IMPLEMENTATION
+7. SUSTAINABILITY / REAL-WORLD IMPACT
+8. SCALABILITY
+9. PRESENTATION / DEMO EXPERIENCE
+
+Every major feature should support at least one of these points.
+
+Do not add random features just to make the application larger.
+
+==================================================
+1. PROBLEM → SOLUTION CLARITY
+==================================================
+
+The dashboard should make the problem and solution obvious within seconds.
+
+Show a clear message such as:
+
+“Hostel energy waste is invisible.
+We make it measurable, competitive and rewarding.”
+
+The main dashboard should communicate:
+
+- How much energy is being used
+- Who is performing best
+- How much energy the community has saved
+- What the student can do to improve
+- What reward they can unlock next
+
+This gives judges a clear problem → solution connection.
+
+==================================================
+2. MAIN LEADERBOARD
+==================================================
+
+Create 50 hostel rooms.
+
+Examples:
 
 101–105
 201–205
 301–305
-and so on.
+401–405
+...
 
-For each room, generate:
+Display the TOP 10 on the main screen.
 
-- Room number
-- Student name
-- Current daily consumption
-- 7-day consumption history
-- Current rank
-- Previous week's rank
-- Eco streak
-- Badges
-- Unlocked perks
-
-Show the top 10 rooms on the main leaderboard.
-
-Each row should contain:
+Each room should have:
 
 - Rank
 - Room number
@@ -60,258 +87,482 @@ Each row should contain:
 - Daily kWh
 - Weekly average
 - Rank movement
+- Efficiency status
 
-Use clear visual indicators:
+Efficiency:
 
-50–80 kWh → Efficient → green
-80–120 kWh → Average → amber
-120–150 kWh → High Usage → red
+50–80 kWh → Efficient → Green
+80–120 kWh → Average → Amber
+120–150 kWh → High Usage → Red
 
-For the top three:
+Top three:
 
-🥇 Gold
-🥈 Silver
-🥉 Bronze
+🥇 #1
+🥈 #2
+🥉 #3
 
-Also show a large community statistic near the top:
+Make the top three visually prominent.
 
-“12,480 kWh saved this week”
+The leaderboard must be immediately understandable.
 
-The exact number can come from the mock data.
+==================================================
+3. COMMUNITY IMPACT
+==================================================
 
-ROOM DETAILS
+Do not only show individual performance.
 
-When someone clicks a room, open a detailed room view.
+Show the impact of the entire hostel.
+
+Example KPI cards:
+
+12,480 kWh
+COMMUNITY ENERGY SAVED
+
+8.7%
+REDUCTION THIS WEEK
+
+50
+ROOMS PARTICIPATING
+
+72%
+ROOMS BELOW TARGET
+
+These numbers should come from the mock data rather than being meaningless static numbers.
+
+This helps demonstrate real-world sustainability impact.
+
+==================================================
+4. PERSONAL PERFORMANCE
+==================================================
+
+Include a “My Room” experience.
 
 Show:
 
-- Large room number
-- Student name
-- Current rank, e.g. “#7 of 50”
-- Current daily usage
-- Target: 80 kWh
-- Progress toward the target
+- Current rank
+- Previous rank
+- Daily consumption
+- Weekly average
+- Target consumption
+- Eco streak
+- Next reward
+- Achievement progress
+
+Example:
+
+“Room 304”
+
+#7 OF 50
+
+68 kWh TODAY
+
+🔥 12 DAY ECO STREAK
+
+“6 more efficient days → Coffee Voucher”
+
+This makes the product personally motivating rather than just informational.
+
+==================================================
+5. ROOM ANALYTICS
+==================================================
+
+When a room is selected, show a detailed view.
+
+Include:
+
 - 7-day consumption graph
 - 80 kWh target line
+- Current consumption
+- Weekly average
+- Improvement percentage
+- Rank movement
 - Eco streak
-- Achievements
-- Unlocked rewards
+
+The graph should make trends obvious.
 
 Example:
 
-“🔥 12-day eco streak”
+“↓ 14% less energy than last week”
 
-The graph should show Monday to Sunday and make it easy to understand whether the room is improving.
+This demonstrates that the application is helping students understand behavior, not just displaying numbers.
 
-GAMIFICATION
+==================================================
+6. GAMIFICATION
+==================================================
 
-The app should feel like a competition, not an electricity monitoring tool.
+Make the competition meaningful.
 
-Include badges such as:
+Achievements:
 
-🔥 Fire Badge — 7-day streak
-⭐ Star Badge — 14-day streak
-🏆 Crown Badge — Top 5
-📈 Trending Badge — Biggest improvement
-🌱 Seedling Badge — First day below 80 kWh
-♻️ Zero-Waste Badge — 3 perfect days
+🔥 Fire Badge
+7-day efficient streak
 
-Also show progress toward the next reward.
+⭐ Star Badge
+14-day efficient streak
 
-Example:
+🏆 Crown Badge
+Top 5 ranking
 
-“6 more efficient days → Coffee Voucher unlocked”
+📈 Trending Badge
+Biggest weekly improvement
 
-REWARDS
+🌱 Seedling Badge
+First day below 80 kWh
 
-Use realistic campus rewards:
+♻️ Zero-Waste Badge
+3 perfect days
+
+Show locked and unlocked badges.
+
+This creates a visible progression system.
+
+==================================================
+7. REAL-WORLD REWARDS
+==================================================
+
+Connect achievements to realistic campus perks.
+
+Examples:
 
 ☕ $5 Coffee Voucher
+
 🧺 $10 Laundry Credits
-🅿️ Prime Parking for 1 Week
+
+🅿️ Prime Parking — 1 Week
+
 📚 Extended Library Hours
+
 🎮 Gaming Room Access
 
-The rewards should feel like something a real college could offer.
+Show:
 
-CHALLENGE FEATURE
+CURRENT PROGRESS
+████████████░░░ 80%
 
-Add a “Challenge a Friend” button.
+“6 efficient days until next reward”
 
-It doesn’t need a backend.
+This demonstrates how the product can influence real behavior.
 
-When clicked, simply open a nice modal containing something like:
+==================================================
+8. SOCIAL COMPETITION
+==================================================
 
-“I’m currently #7 on the Hostel Energy Leaderboard.
-Can you beat my score?”
+Add:
 
-Include a copy/share button as a visual mockup.
+“Challenge a Friend”
 
-DESIGN
+Clicking it opens a modal.
 
-Make the UI look premium and modern.
+Example message:
 
-I want a strong purple visual identity rather than a generic green sustainability dashboard.
+“I’m #7 on the Hostel Energy Leaderboard.
+Think you can beat me?”
+
+Add a mock copy/share button.
+
+No backend is required.
+
+This demonstrates the social mechanism behind the concept.
+
+==================================================
+9. INNOVATION
+==================================================
+
+Do not present this as another electricity-monitoring dashboard.
+
+The key innovation is the combination of:
+
+ENERGY DATA
++
+SOCIAL COMPETITION
++
+STREAKS
++
+ACHIEVEMENTS
++
+REAL CAMPUS REWARDS
+
+Visually communicate this as the product's core loop.
+
+TRACK
+↓
+COMPARE
+↓
+COMPETE
+↓
+ACHIEVE
+↓
+REWARD
+↓
+SAVE MORE
+
+This should be one of the strongest visual sections of the application/presentation.
+
+==================================================
+10. TECHNICAL IMPLEMENTATION
+==================================================
 
 Use:
 
-- Deep purple: #6D28D9
-- Violet: #8B5CF6
-- Lavender: #A78BFA
-- Light purple: #EDE9FE
-- White
-- Dark charcoal
-- Green for efficient usage
-- Amber for average usage
-- Red for high usage
+React + Vite
+Tailwind CSS
+Recharts
+Lucide React
+JavaScript mock data
 
-The overall feeling should be:
+No backend.
 
-PURPLE + ENERGY + GAMIFICATION + PREMIUM TECH
+However, structure the frontend cleanly so that mock data could later be replaced by real APIs.
 
-Use subtle gradients, glowing purple accents, clean cards, rounded corners, strong typography and lots of breathing space.
+Keep components modular:
 
-Avoid making it look like a normal college project.
+Leaderboard
+RoomDetail
+StatsCard
+Badge
+RewardCard
+EnergyChart
+Navigation
+ChallengeModal
 
-It should feel closer to a polished startup product.
+Generate 50 rooms using deterministic mock data.
 
-Use Inter, Geist or Poppins.
+Do NOT use Math.random() directly during every render.
 
-Keep the UI clean. Don't fill every empty space with cards or text.
+The leaderboard should remain consistent after refresh.
 
-DASHBOARD STYLE
+==================================================
+11. FUTURE SCALABILITY
+==================================================
 
-The main dashboard can have:
+The prototype should visually suggest how the system could scale.
 
-1. Community energy saved
-2. My room rank
-3. My eco streak
-4. Next reward progress
-5. Top 3 rooms
-6. Full leaderboard
+Future integration:
 
-The top three rooms should have a slightly larger visual treatment so the competition is obvious.
+SMART METERS
+↓
+ENERGY DATA PLATFORM
+↓
+AI ENERGY INSIGHTS
+↓
+HOSTEL LEADERBOARD
+↓
+CAMPUS REWARDS
 
-RESPONSIVE DESIGN
+Potential future features:
 
-The app must work properly on:
+- Smart meter integration
+- Real-time consumption
+- AI-generated energy-saving recommendations
+- Hostel/floor competitions
+- Campus-wide rankings
+- Carbon footprint tracking
+- Admin analytics
 
-- 375px mobile
-- 768px tablet
-- 1440px desktop
+Do not build these now.
 
-On mobile, simplify the leaderboard to:
+Show them only as future scalability.
+
+==================================================
+12. PREMIUM UI / UX
+==================================================
+
+Use a premium PURPLE technology aesthetic.
+
+Primary:
+
+#6D28D9
+#8B5CF6
+#A78BFA
+#EDE9FE
+
+Supporting:
+
+#22C55E
+#F59E0B
+#EF4444
+#17111F
+#FFFFFF
+
+Design language:
+
+- Premium SaaS
+- Gamification
+- Sustainability technology
+- Purple energy glow
+- Clean cards
+- Strong typography
+- Subtle gradients
+- Soft shadows
+- Large numbers
+- Clear data visualization
+- Plenty of whitespace
+
+Avoid:
+
+- Generic admin dashboard
+- Excessive cards
+- Stock photos
+- Cartoon graphics
+- Overloaded screens
+- Unnecessary animations
+- Generic Bootstrap appearance
+
+The UI should look like a product that could actually be launched.
+
+==================================================
+13. RESPONSIVE DESIGN
+==================================================
+
+Test for:
+
+375px
+768px
+1440px
+
+Mobile leaderboard:
 
 Rank | Room | kWh
 
-Everything else can be viewed inside the room detail page.
+Room details can contain the remaining information.
 
-Buttons should be easy to tap. Don't rely on hover interactions.
+All buttons should have comfortable touch targets.
 
-ANIMATIONS
+Do not depend on hover interactions.
 
-Use animations only where they actually improve the experience.
+==================================================
+14. MICRO-INTERACTIONS
+==================================================
 
-Good examples:
+Use purposeful animations:
 
-- Smooth leaderboard movement
-- Rank up/down animation
+- Leaderboard rank movement
 - Progress bar animation
-- Badge pop animation
-- Subtle pulse on top 3
-- Confetti when a badge is unlocked
+- Badge unlock animation
+- Subtle top-three pulse
+- Confetti after achievement unlock
+- Smooth room-detail transition
 
-Don't overdo animations.
+Animations should improve the demo rather than distract from it.
 
-MOCK DATA
+==================================================
+15. DEMO EXPERIENCE
+==================================================
 
-Generate 50 rooms with realistic-looking data.
+The application should be extremely easy to demonstrate to judges.
 
-Keep the data consistent between refreshes. Don't randomly change the leaderboard every time the page loads.
+Recommended demo flow:
 
-The top rooms should have genuinely low consumption so the rankings make sense.
+STEP 1
+Open dashboard.
+
+Judge immediately sees:
+“12,480 kWh saved”
+
+STEP 2
+Show the top 3 rooms.
+
+STEP 3
+Click Room 304.
+
+STEP 4
+Show:
+68 kWh
+#7 rank
+12-day streak
+7-day graph
+
+STEP 5
+Show:
+“6 days until Coffee Voucher”
+
+STEP 6
+Open achievements.
+
+STEP 7
+Click “Challenge a Friend.”
+
+This should take less than 60 seconds and demonstrate the majority of the product.
+
+==================================================
+16. MOCK DATA
+==================================================
+
+Generate 50 realistic rooms.
+
+Each room:
+
+{
+roomNumber,
+studentName,
+dailyKwh,
+weeklyHistory,
+currentRank,
+previousRank,
+ecoStreak,
+achievements,
+perks
+}
+
+Keep the rankings logically consistent.
 
 Example:
 
 Room 304 — 58 kWh — #1
 Room 102 — 63 kWh — #2
 Room 407 — 67 kWh — #3
+Room 203 — 69 kWh — #4
+Room 501 — 72 kWh — #5
 
-Generate different student names and realistic 7-day usage histories.
+Make the data believable.
 
-Each room should have 2–4 badges and perks based on performance.
+==================================================
+17. IMPORTANT 30-MINUTE CONSTRAINT
+==================================================
 
-IMPORTANT
-
-This is a prototype, so don't waste time building:
+Do NOT waste time on:
 
 - Backend
 - Database
 - Authentication
-- Real-time APIs
+- API integration
 - IoT integration
-- Admin panels
-- Complicated settings
+- Admin dashboard
+- Complex settings
 
-Focus on making the frontend look extremely polished.
+90% of effort should go into:
 
-The judge should understand the idea immediately.
+FUNCTIONALITY
++
+UI POLISH
++
+DEMO EXPERIENCE
 
-The story of the product is:
+The prototype should feel complete even though the data is mocked.
 
-Students don't see their electricity usage
-↓
-We make usage visible
-↓
-Rooms compete
-↓
-Students build eco-streaks
-↓
-They earn badges
-↓
-They unlock real campus rewards
-↓
-The hostel saves energy
+==================================================
+FINAL PRODUCT MESSAGE
+==================================================
 
-The main goal is to make saving electricity feel competitive, visible and rewarding.
+The application should communicate this idea clearly:
 
-PROJECT STRUCTURE
+“Instead of simply telling students to save electricity,
+we make saving electricity visible, competitive and rewarding.”
 
-Keep the code simple and organized:
+The final product should score strongly on:
 
-src/
-├── components/
-│   ├── Leaderboard.jsx
-│   ├── RoomDetail.jsx
-│   ├── Badge.jsx
-│   ├── Chart.jsx
-│   └── Navigation.jsx
-├── data/
-│   └── mockData.js
-├── App.jsx
-└── index.css
+✓ Clear problem
+✓ Relevant solution
+✓ Innovation
+✓ Working interactions
+✓ Strong UI/UX
+✓ Technical execution
+✓ Sustainability impact
+✓ Scalability
+✓ Strong demo
 
-Start with:
+Do not build a generic energy dashboard.
 
-npm create vite@latest hostel-energy-leaderboard -- --template react
+Build a product that makes judges think:
 
-Then:
-
-cd hostel-energy-leaderboard
-npm install
-
-Install whatever small libraries are needed for the charts/icons and run:
-
-npm run dev
-
-FINAL EXPECTATION
-
-I don't want a generic dashboard template.
-
-I want something that looks like a real product a college could actually launch.
-
-The first impression should be:
-
-“Okay, this is an energy-saving competition for hostel students.”
-
-Keep the interface beautiful, fast, simple and fun.
+“This could actually work in a college hostel.”
